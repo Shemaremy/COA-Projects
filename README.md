@@ -3,4 +3,4 @@
 
 ## For the photo gallery project, I used React.js to build it and you'll be able to access it by the link below:
 
-- The Link : 
+- The Link : https://remygalleryapp.netlify.app/
