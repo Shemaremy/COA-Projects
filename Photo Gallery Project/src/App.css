@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(27, 27, 27);
+    height: 200vh;
+    width: 97vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+.Everything {
+    width: 80%;
+    height: 95%;
+    background-color: rgba(70, 70, 70, 0.199);
+    border-style: solid;
+    border-radius: 40px;
+    border-width: 1px;
+    border-color: rgb(77, 77, 77);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.Intro {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 33%;
+    border-style: solid;
+    border-radius: 30px 30px 0px 0px;
+    border-width: 0px;
+    border-color: rgb(77, 77, 77);
+}
+
+.gallery1 {
+    width: 95%;
+    height: 30%;
+    border-style: solid;
+    border-width: 0px;
+    border-color: rgb(77, 77, 77);
+
+}
+
+.gallery2 {
+    width: 90%;
+    height: 30%;
+    border-style: solid;
+    border-radius: 0px 0px 30px 30px;
+    border-width: 0px;
+    border-color: rgb(77, 77, 77);
+
+}
