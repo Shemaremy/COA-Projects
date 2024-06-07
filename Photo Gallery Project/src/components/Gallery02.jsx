@@ -10,7 +10,7 @@ import Deer2 from '../assets/Image3.jpg'
 
 
 function gallery2 () {
-
+ 
     return(
         <>
             <div className="cards_library-2">

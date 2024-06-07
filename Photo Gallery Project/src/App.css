@@ -7,6 +7,21 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+
+    @media (min-width: 768px) and (max-width: 1160px)   /* Tablets and small laptops */   {
+        height: 180vh;
+    }
+
+
+    
+    @media (min-width: 767px) and (max-width: 581px)     /* Mobile devices */ {
+        height: 150vh;
+    }
+
+
+    @media (max-width: 580px)     /* Smaller Mobile devices */ {
+        height: 120vh;
+    }
 }
 
 
@@ -24,6 +39,19 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+
+    @media (min-width: 768px) and (max-width: 1160px)   /* Tablets and small laptops */   {
+        width: 90%;
+        border-radius: 25px;
+    }
+
+
+    
+    @media (max-width: 767px)     /* Mobile devices */ {
+        width: 95%;
+        border-radius: 10px;
+    }
+
 }
 
 

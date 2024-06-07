@@ -1,3 +1,6 @@
+
+/*---------------------------------------------- INTRO SECTION  ----------------------------------------------------------------------------*/
+
 .Intro_container {
     background-color: brown;
     width: 90%;
@@ -6,21 +9,62 @@
     border-style: solid;
     border-width: 0px;
     border-radius: 40px;
-    overflow: hidden;    
+    overflow: hidden;   ; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    @media (min-width: 768px) and (max-width: 1024px)   /* Tablets and small laptops */   {
+        width: 90%;
+    }
+
+    @media (max-width: 767px)     /* Mobile devices */ {
+        width: 95%;
+    }
+
+
 }
 
 p {
-    color: white;
+    color: rgb(218, 218, 218);
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 5%;
-    padding: 3%;
     font-size: 40px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
+
+
+    @media (min-width: 768px) and (max-width: 1160px)   /* Tablets and small laptops */   {
+        font-size: 30px;
+
+    }
+
+
+    
+    @media (max-width: 767px)     /* Mobile devices */ {
+        font-size: 20px;
+    }
+
 }
 
+
+/*-------------------------------------  END OF INTRO  --------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------GALLERY 1 SECTION--------------------------------------------------------------------------------*/
 
 
 .cards_library {
@@ -34,7 +78,7 @@ p {
 }
 
 .card {
-    position: relative; /* Add this to make absolute positioning relative to this */
+    position: relative; 
     border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.11);
@@ -54,14 +98,11 @@ p {
     transition: transform 0.3s ease;
 }
 
-.grayscale {
-    filter: grayscale(100%);
-  }
 
 
 .info {
-    position: absolute; /* Position relative to the .card */
-    bottom: 0; /* Place info at the bottom initially */
+    position: absolute; 
+    bottom: 0; 
     left: 0;
     width: 100%;
     height: 40%;
@@ -69,15 +110,15 @@ p {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 0; /* Adjust as needed */
+    padding: 0;
     box-sizing: border-box;
-    transition: transform 0.8s ease; /* Add transition for smooth hover effect */
-    transform: translateY(0); /* Initially, keep it at the bottom */
+    transition: transform 0.8s ease; 
+    transform: translateY(0); 
 }
 
 
 .card:hover .info {
-    transform: translateY(-20%); /* Move info up on hover */
+    transform: translateY(-20%); 
 }
 
 
@@ -94,15 +135,45 @@ p {
     font-style: normal;
     font-size: 25px;
     transition: transform 10s ease;
+
+
+    @media (min-width: 865px) and (max-width: 3000px)   /* Tablets and small laptops */
+    {
+        font-size: 20px;
+    }
+
+    @media (min-width: 561px) and (max-width: 864px)     /* Mobile devices */ {
+        font-size: 15px;
+    }
+
+    @media (max-width: 560px)     /*Smaller Mobile devices */ {
+        font-size: 10px;
+    }
+
 }
 
 .country {
     margin-left: 5%;
-    margin-bottom: 0;
-    font-size: 12px;
+    margin-bottom: 4%;;
+    margin-top: 4%;
+    font-size: 11px;
     color: rgb(211, 211, 211);
     font-family: "Poppins", sans-serif;
     transition: transform 10s ease;
+
+    @media (min-width: 865px) and (max-width: 1024px)   /* Tablets and small laptops */
+    {
+        font-size: 9px;
+    }
+
+    @media (min-width: 561px) and (max-width: 864px)     /* Mobile devices */ {
+        font-size: 9px;
+    }
+
+    @media (max-width: 560px)     /* Smaller Mobile devices */ {
+        font-size: 7px;
+    }
+
 }
 
 
@@ -111,11 +182,11 @@ p {
     margin-top: 0;
     opacity: 0;
     margin-bottom: 0;
-    margin-left: 8%;
+    margin-left: 5%;
     color: rgb(106, 208, 255);
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    transition: opacity 0.3s ease-in-out; /* Add transition for smooth hover effect */
+    transition: opacity 0.3s ease-in-out;
 }
 
 
@@ -124,6 +195,19 @@ p {
     opacity: 1;
 }
 
+.card img {
+    transition: filter 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card:hover img {
+    filter: grayscale(100%) blur(4px);
+    transform: scale(1.1);
+}
+
+
+
+
+/*------------------------------------- END OF GALLERY1--------------------------------------------------------------------------------*/
 
 
 
@@ -135,24 +219,7 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*------------------------------------GALLERY 2 SECTION--------------------------------------------------------------------------------*/
 
 
 .cards_library-2 {
@@ -187,8 +254,17 @@ p {
 
 
 
+.card-2 img {
+    transition: filter 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
 
 
 
+.card-2:hover img {
+    filter: grayscale(100%) blur(4px);
+    transform: scale(1.1);
+}
 
 
+
+/*-------------------------------------  END OF GALLERY 2  --------------------------------------------------------------------------------*/
