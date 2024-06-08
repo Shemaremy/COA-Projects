@@ -22,3 +22,4 @@ The link: https://remygalleryapp.netlify.app/
 ## Coding Solutions
 
 This folder contains solutions to coding challenges that I've completed. I named each as you instructed me respectively.
+
