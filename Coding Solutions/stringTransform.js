@@ -58,7 +58,7 @@ function checkLength(Name) {
 
 
 
-rl.question('Enter your name : ', (Name) => {
+rl.question('Enter your word : ', (Name) => {
     len = Name.length
     checkLength(Name);
     rl.close();
