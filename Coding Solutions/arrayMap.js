@@ -49,7 +49,7 @@ function lengthCheck(){
 
 
     if (Array.length > min && Array.length < max) {
-        Checker();
+        Checker(); // This condition will never be true. Dont worry
     } else {
         console.log("Please, enter elements in array which are between 1 and 100,000")
     }    
