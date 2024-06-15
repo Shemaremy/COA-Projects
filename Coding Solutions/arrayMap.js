@@ -76,10 +76,10 @@ function collectInput(length, currentIndex) {
 // Basic questions. Asks Length of array and its Target sum
 function startInputCollection() {
     rl.question('Enter length of array: ', (length) => {
-        let len = parseInt(length);
+        let length = parseInt(length);
         rl.question('Now enter the Target: ', (inputTarget) => {
             Target = parseInt(inputTarget);   // Convert it to an integer
-            collectInput(len, 1);
+            collectInput(length, 1);
         });
     });
 }
