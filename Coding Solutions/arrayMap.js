@@ -79,7 +79,7 @@ function startInputCollection() {
         let len = parseInt(length);
         rl.question('Now enter the Target: ', (inputTarget) => {
             Target = parseInt(inputTarget);   // Convert it to an integer
-            collectInput(parseInt(len, 1);
+            collectInput(len, 1);
         });
     });
 }
