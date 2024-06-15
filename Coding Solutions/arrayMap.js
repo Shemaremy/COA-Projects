@@ -66,8 +66,9 @@ function collectInput(length, currentIndex) {
     }
 
     rl.question(`Enter element ${currentIndex}: `, (input) => {
-        Array.push(parseInt(input)); // Add the input to the array after converting it to a number
-        sum += parseInt(input); // Add the input to the sum
+        let element = parseInt(input);
+        Array.push(element); // Add the input to the array after converting it to a number
+        sum = sum + element; // Add the input to the sum
         collectInput(length, currentIndex + 1);
     });
 }
