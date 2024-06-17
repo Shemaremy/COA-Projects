@@ -13,7 +13,6 @@ import Deer from '../assets/Image3.jpg'
 
 
 
-
 function gallery1 () {
 
     return(

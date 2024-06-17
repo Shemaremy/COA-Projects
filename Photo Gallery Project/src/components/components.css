@@ -118,7 +118,7 @@ p {
 
 
 .card:hover .info {
-    transform: translateY(-20%); 
+    transform: translateY(-20%);  /*Enables it to slide upwards smoothly*/
 }
 
 
@@ -217,6 +217,7 @@ p {
     filter: grayscale(100%) blur(4px);
     transform: scale(1.1);
 }
+
 
 
 

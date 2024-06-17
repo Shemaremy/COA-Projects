@@ -6,7 +6,6 @@ const rl = readline.createInterface({
 
 let Array = [];
 let Target;
-let sum = 0;
 
 
 
@@ -20,7 +19,7 @@ function Checker () {
     for (let p = 0; p < Array.length; p++) {
         let Sum = 0;
         for (let i = p; i < Array.length; i++) {
-            Sum += Array[i];
+            Sum = Sum + Array[i];
             if (Sum === Target) {
                 found = true;
                 break;
@@ -48,8 +47,8 @@ function lengthCheck(){
 
 
 
-    if (Array.length > min && Array.length < max) {
-        Checker(); // This condition will never be true. Dont worry
+    if (Array.length > min && Array.length < max) {    // Checks if the array length is btn 1 and 100,000 as suggested
+        Checker(); // This is the final condition to find the suba array
     } else {
         console.log("Please, enter elements in array which are between 1 and 100,000")
     }    
@@ -57,10 +56,10 @@ function lengthCheck(){
 
 
 
-// This one asks to enter the array elements one by one
+// This one asks to enter the array elements one by one. And it also loops by recursion where it is calling itself below
 function collectInput(length, currentIndex) {
-    if (currentIndex > length) {
-        lengthCheck();
+    if (currentIndex > length) {   // This determines when to stop. When the current index is trying to exceed the array length
+        lengthCheck();             // Now we got our elements in array, we call this to find if there is a sub array = Target
         rl.close();
         return;
     }
@@ -77,10 +76,10 @@ function collectInput(length, currentIndex) {
 // Basic questions. Asks Length of array and its Target sum
 function startInputCollection() {
     rl.question('Enter length of array: ', (length) => {
-        let length = parseInt(length);
+        let len = parseInt(length);
         rl.question('Now enter the Target: ', (inputTarget) => {
             Target = parseInt(inputTarget);   // Convert it to an integer
-            collectInput(length, 1);
+            collectInput(len, 1);
         });
     });
 }
@@ -91,6 +90,3 @@ function startInputCollection() {
 
 
 startInputCollection();
-
-
-
