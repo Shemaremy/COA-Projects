@@ -9,12 +9,10 @@ let Target;
 
 
 
-
-
 //This function checks if the sub array exist or doesnt exist and returns the final output
 function Checker () {
 
-    let found = false;
+    let found = false;          // Set it to false by default
     
     for (let p = 0; p < Array.length; p++) {
         let Sum = 0;
@@ -24,11 +22,12 @@ function Checker () {
                 found = true;
                 break;
             }
-            if (Sum > Target) {
+            else if (Sum > Target) {         // If Sum exceeds Target, breaks the inner loop cause rest elements will only increase the sum beyond Target
                 break;
             }
         }
-        if (found) {
+
+        if (found == true) {        // If it sums up to Target, no need to loop again
             break;
         }
     }
@@ -58,16 +57,16 @@ function lengthCheck(){
 
 // This one asks to enter the array elements one by one. And it also loops by recursion where it is calling itself below
 function collectInput(length, currentIndex) {
-    if (currentIndex > length) {   // This determines when to stop. When the current index is trying to exceed the array length
+    if (currentIndex >= length) {   // This determines when to stop. When the current index is trying to exceed the array length
         lengthCheck();             // Now we got our elements in array, we call this to find if there is a sub array = Target
         rl.close();
         return;
     }
-
+    
+    
     rl.question(`Enter element ${currentIndex}: `, (input) => {
         let element = parseInt(input);
         Array.push(element); // Add the input to the array after converting it to a number
-        sum = sum + element; // Add the input to the sum
         collectInput(length, currentIndex + 1);
     });
 }
